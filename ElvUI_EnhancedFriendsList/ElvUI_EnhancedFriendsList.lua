@@ -9,8 +9,13 @@ local format = format
 
 local IsChatAFK = IsChatAFK
 local IsChatDND = IsChatDND
-local GetFriendInfo, GetQuestDifficultyColor = GetFriendInfo, GetQuestDifficultyColor
+local GetFriendInfo = GetFriendInfo
+local GetQuestDifficultyColor = GetQuestDifficultyColor
+local GetNumFriends = GetNumFriends
 local LEVEL = LEVEL
+local FRIENDS_BUTTON_TYPE_WOW = FRIENDS_BUTTON_TYPE_WOW
+local LOCALIZED_CLASS_NAMES_FEMALE = LOCALIZED_CLASS_NAMES_FEMALE
+local LOCALIZED_CLASS_NAMES_MALE = LOCALIZED_CLASS_NAMES_MALE
 local RAID_CLASS_COLORS = RAID_CLASS_COLORS
 
 local EnhancedOnline = "Interface\\AddOns\\ElvUI_EnhancedFriendsList\\Media\\Textures\\StatusIcon-Online"
@@ -25,8 +30,9 @@ P["enhanceFriendsList"] = {
 	["enhancedTextures"] = true,
 	["enhancedName"] = true,
 	["enhancedZone"] = false,
-	["showClass"] = false,
+	["hideClass"] = true,
 	["levelColor"] = false,
+	["shortLevel"] = false,
 	["sameZone"] = true,
 	["nameFont"] = "PT Sans Narrow",
 	["nameFontSize"] = 12,
@@ -78,11 +84,11 @@ function EFL:InsertOptions()
 						name = L["Enhanced Zone"],
 						set = function(info, value) E.db.enhanceFriendsList.enhancedZone = value; EFL:EnhanceFriends() end
 					},
-					showClass = {
+					hideClass = {
 						order = 4,
 						type = "toggle",
-						name = L["Show Class Text"],
-						set = function(info, value) E.db.enhanceFriendsList.showClass = value; EFL:EnhanceFriends() end
+						name = L["Hide Class Text"],
+						set = function(info, value) E.db.enhanceFriendsList.hideClass = value; EFL:EnhanceFriends() end
 					},
 					levelColor = {
 						order = 5,
@@ -90,10 +96,17 @@ function EFL:InsertOptions()
 						name = L["Level Range Color"],
 						set = function(info, value) E.db.enhanceFriendsList.levelColor = value; EFL:EnhanceFriends() end
 					},
-					sameZone = {
+					shortLevel = {
 						order = 6,
 						type = "toggle",
+						name = L["Short Level"],
+						set = function(info, value) E.db.enhanceFriendsList.shortLevel = value; EFL:EnhanceFriends() end
+					},
+					sameZone = {
+						order = 7,
+						type = "toggle",
 						name = L["Same Zone Color"],
+						desc = L["Friends that are in the same area as you, have their zone info colorized green."],
 						set = function(info, value) E.db.enhanceFriendsList.sameZone = value; EFL:EnhanceFriends() end
 					}
 				}
@@ -218,32 +231,35 @@ function EFL:EnhanceFriends()
 					button.status:SetTexture(E.db.enhanceFriendsList.enhancedTextures and EnhancedDnD or FRIENDS_TEXTURE_DND)
 				end
 				local diff = level ~= 0 and format("|cff%02x%02x%02x", GetQuestDifficultyColor(level).r * 255, GetQuestDifficultyColor(level).g * 255, GetQuestDifficultyColor(level).b * 255) or "|cFFFFFFFF"
+				local shortLevel = E.db.enhanceFriendsList.shortLevel and L["SHORT_LEVEL"] or LEVEL
+
 				if E.db.enhanceFriendsList.enhancedName then
-					if E.db.enhanceFriendsList.showClass then
+					if E.db.enhanceFriendsList.hideClass then
 						if E.db.enhanceFriendsList.levelColor then
-							nameText = format("%s%s - %s %s%s|r %s%s", ClassColorCode(class), name, LEVEL, diff, level, ClassColorCode(class), class)
+							nameText = format("%s%s - %s %s%s|r", ClassColorCode(class), name, shortLevel, diff, level)
 						else
-							nameText = format("%s%s - %s %s %s", ClassColorCode(class), name, LEVEL, level, class)
+							nameText = format("%s%s - %s %s", ClassColorCode(class), name, shortLevel, level)
 						end
 					else
 						if E.db.enhanceFriendsList.levelColor then
-							nameText = format("%s%s - %s %s%s|r", ClassColorCode(class), name, LEVEL, diff, level)
+							nameText = format("%s%s - %s %s%s|r %s%s", ClassColorCode(class), name, shortLevel, diff, level, ClassColorCode(class), class)
 						else
-							nameText = format("%s%s - %s %s", ClassColorCode(class), name, LEVEL, level)
+							nameText = format("%s%s - %s %s %s", ClassColorCode(class), name, shortLevel, level, class)
 						end
 					end
 				else
-					if E.db.enhanceFriendsList.showClass then
+					if E.db.enhanceFriendsList.hideClass then
 						if E.db.enhanceFriendsList.levelColor then
-							nameText = format("%s, %s %s%s|r %s", name, LEVEL, diff, level, class)
+							nameText = format("%s, %s %s%s|r", name, shortLevel, diff, level)
 						else
-							nameText = format("%s, %s %s %s", name, LEVEL, level, class)
+							nameText = format("%s, %s %s", name, shortLevel, level)
 						end
+
 					else
 						if E.db.enhanceFriendsList.levelColor then
-							nameText = format("%s, %s %s%s|r", name, LEVEL, diff, level)
+							nameText = format("%s, %s %s%s|r %s", name, shortLevel, diff, level, class)
 						else
-							nameText = format("%s, %s %s", name, LEVEL, level)
+							nameText = format("%s, %s %s %s", name, shortLevel, level, class)
 						end
 					end
 				end
