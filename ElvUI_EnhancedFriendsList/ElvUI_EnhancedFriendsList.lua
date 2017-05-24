@@ -206,6 +206,8 @@ function EFL:EnhanceFriends()
 
 		if button.buttonType == FRIENDS_BUTTON_TYPE_WOW then
 			local name, level, class, area, connected, status = GetFriendInfo(button.id)
+			if not name then return end
+
 			broadcastText = nil
 			if connected then
 				if status == "" then
