@@ -7,12 +7,12 @@ L["Enhanced Name"] = true;
 L["Enhanced Status"] = true;
 L["Enhanced Zone"] = true;
 L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+L["Hide Class Text"] = true;
 L["Level Range Color"] = true;
 L["Name Text Font"] = true;
 L["Same Zone Color"] = true;
 L["SHORT_LEVEL"] = "L"
 L["Short Level"] = true;
-L["Hide Class Text"] = true;
 L["Zone Text Font"] = true;
 
 if GetLocale() == "enUS" then return end
@@ -25,12 +25,12 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -42,12 +42,12 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -59,12 +59,12 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -76,13 +76,13 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["L"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -94,12 +94,12 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -111,12 +111,12 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -128,12 +128,12 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end
 
@@ -145,11 +145,11 @@ if L then
 	L["Enhanced Status"] = true;
 	L["Enhanced Zone"] = true;
 	L["Friends that are in the same area as you, have their zone info colorized green."] = true;
+	L["Hide Class Text"] = true;
 	L["Level Range Color"] = true;
 	L["Name Text Font"] = true;
 	L["Same Zone Color"] = true;
 	L["SHORT_LEVEL"] = "L"
 	L["Short Level"] = true;
-	L["Hide Class Text"] = true;
 	L["Zone Text Font"] = true;
 end

@@ -1,6 +1,6 @@
 ﻿## Interface: 50400
 ## Author: Apollyon
-## Version: 5.4.8-1.00
+## Version: 5.4.8-1.01
 ## Title: |cff00dd91E|r|cffe5e3e3lvUI|r |cff00dd91E|r|cffe5e3e3nhanced|r |cff00dd91F|r|cffe5e3e3riends|r |cff00dd91L|r|cffe5e3e3ist|r
 ## RequiredDeps: ElvUI
 
