@@ -332,4 +332,8 @@ function EFL:Initialize()
 	EFL:FriendListUpdate()
 end
 
-E:RegisterModule(EFL:GetName())
+local function InitializeCallback()
+	EFL:Initialize()
+end
+
+E:RegisterModule(EFL:GetName(), InitializeCallback)
