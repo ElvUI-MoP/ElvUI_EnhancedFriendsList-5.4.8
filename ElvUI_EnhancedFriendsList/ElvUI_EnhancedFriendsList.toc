@@ -1,6 +1,6 @@
 ﻿## Interface: 50400
 ## Author: Apollyon
-## Version: 5.4.8-1.01
+## Version: 1.11
 ## Title: |cff00fcceE|r|cffe5e3e3lvUI|r |cff00fcceE|r|cffe5e3e3nhanced|r |cff00fcceF|r|cffe5e3e3riends|r |cff00fcceL|r|cffe5e3e3ist|r
 ## SavedVariables: EnhancedFriendsListDB
 ## RequiredDeps: ElvUI
