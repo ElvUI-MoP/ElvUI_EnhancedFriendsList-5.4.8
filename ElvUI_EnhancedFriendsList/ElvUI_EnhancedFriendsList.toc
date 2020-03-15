@@ -1,8 +1,12 @@
 ﻿## Interface: 50400
 ## Author: Apollyon
 ## Version: 5.4.8-1.01
-## Title: |cff00dd91E|r|cffe5e3e3lvUI|r |cff00dd91E|r|cffe5e3e3nhanced|r |cff00dd91F|r|cffe5e3e3riends|r |cff00dd91L|r|cffe5e3e3ist|r
+## Title: |cff00fcceE|r|cffe5e3e3lvUI|r |cff00fcceE|r|cffe5e3e3nhanced|r |cff00fcceF|r|cffe5e3e3riends|r |cff00fcceL|r|cffe5e3e3ist|r
+## SavedVariables: EnhancedFriendsListDB
 ## RequiredDeps: ElvUI
 
-Locales.lua
+Locales\Load_Locales.xml
+Media\Load_Media.xml
+Settings\Load_Settings.xml
 ElvUI_EnhancedFriendsList.lua
+Config\Load_Config.xml
